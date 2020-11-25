@@ -28,10 +28,8 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Box2D.NetStandard.Common;
 using Math = System.Math;
 
@@ -219,7 +217,7 @@ namespace Box2D.NetStandard.Collision
 				node.Height = -1;
 			}
 
-			ref var lastNode = ref _nodes[^1];
+			ref var lastNode = ref _nodes[255];
 
 			lastNode.Parent = Proxy.Free;
 			lastNode.Height = -1;

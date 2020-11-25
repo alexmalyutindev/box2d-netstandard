@@ -25,8 +25,6 @@
 // SOFTWARE.
 */
 
-using System;
-
 namespace Box2D.NetStandard.Common
 {
 	public class Settings
@@ -42,7 +40,7 @@ namespace Box2D.NetStandard.Common
 		public const float FLT_EPSILON_SQUARED = FLT_EPSILON * FLT_EPSILON; //smallest such that 1.0f+FLT_EPSILON != 1.0f
 
 		public const float Pib2 = 3.14159265359f;        // Original code. Comes out at 3.1415927f
-		public const float Pi = MathF.PI;                // Also 3.1415927f
+		public const float Pi = 3.1415927f; //MathF.PI; // Also 3.1415927f
 		public const float Pi2 = (float) System.Math.PI; // Also displayed as "3.1415927f"
 		public const float Tau = 2f * Pi;
 

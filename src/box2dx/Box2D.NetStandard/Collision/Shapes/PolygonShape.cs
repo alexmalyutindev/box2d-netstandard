@@ -27,9 +27,11 @@
 
 //#define DEBUG
 
+using System;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using Box2D.NetStandard.Common;
+using Math = Box2D.NetStandard.Common.Math;
 
 namespace Box2D.NetStandard.Collision.Shapes
 {
@@ -454,6 +456,6 @@ namespace Box2D.NetStandard.Collision.Shapes
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public Vector2[] GetVertices() => m_vertices[..m_count];
+		public Vector2[] GetVertices() => new ArraySegment<Vector2>(m_vertices, 0, m_count).ToArray();
 	}
 }
